@@ -1,0 +1,136 @@
+var street_name = ['Rutland','Apothecary','Angrave','Chapel','Union',"St. Thomas's",'Crescent','Crown','Devonshire','Bartholomew','Oakley','Beaconsfield','Beaumont','Westmoreland','Victoria','Trinity','Hart','White Horse','Upper William','Bell','Southampton','Caldwell','James',"St. James's",'York','Cedar','Norfolk','Rochester','Ridgmount','Queen','Remnant','Regal','Great Queen','Montpelier',"Wright's",'Roman','Little Randolph','Artillery','Market','Saltwell','Woodland','Wharf','Sceptre','Sandy Hill','Salmon'];
+var street_end = ['Street','Avenue','Place','Row','Mews','Terrace','Lane','Road','Close','Buildings','Gardens','Grove','Rents','Cottages','Yard'];
+var femaleFirstNames = ['Agnes','Alexandra','Alice','Alicia','Alma','Alva','Amanda','Anna','Astrid','Cornelia','Ebba','Edith','Elin','Elina','Elise','Ella','Ellen','Ellie','Elsa','Elvira','Emelie','Emilia','Emma','Emmy','Ester','Evelina','Fanny','Felicia','Filippa','Freja','Frida','Greta','Hanna','Hedda','Hilda','Ida','Inez','Ingrid','Iris','Isabella','Isabelle','Jasmine','Johanna','Joline','Josefin','Julia','Kajsa','Klara','Lea','Leia','Lilly','Lina','Linn','Linnea','Lisa','Liv','Livia','Lova','Lovisa','Maja','Malva','Maria','Matilda','Meja','Melissa','Mira','Miranda','Moa','Molly','My','Märta','Nathalie','Nellie','Nicole','Nora','Nova','Olivia','Rebecka','Ronja','Rut','Saga','Sara','Selma','Signe','Siri','Sofia','Sofie','Stella','Stina','Svea','Thea','Tilda','Tilde','Tindra','Tuva','Tyra','Vera','Victoria','Vilda','Wilma'];
+var extraFemaleFirstNames = ['Gunn','Ann','Viola','Linn','Stina','Li'];
+var maleFirstNames = ['Lucas','Elias','Oscar','William','Hugo','Alexander','Oliver','Viktor','Erik','Axel','Filip','Emil','Isak','Leo','Liam','Theo','Anton','Melvin','Albin','Gustav','Max','Ludvig','Arvid','Edvin','Vincent','Viggo','Alvin','Wilmer','Adam','Noah','Elliot','Simon','Jonathan','Kevin','Olle','Benjamin','Linus','Carl','Alfred','Rasmus','Gugge','Gabriel','Charlie','Jacob','Theodor','Nils','Leon','Felix','Sebastian','Noel','Casper','Malte','Sixten','Ville','David','Melker','Joel','Hampus','Neo','Adrian','Samuel','Love','Milo','Josef','Jack','Mohammed','Wilhelm','Alex','Daniel','Tim','Valter','Sigge','Vilgot','Robin','Marcus','Vidar','August','Milton','Måns','Hannes','Maximilian','Loke','Harry','Elis','John','Aron','Hjalmar','Otto','Elton','Mio','Fabian','Eddie','Sam','Svante','Dante','Ali','Johannes','Mattias','Jesper','Dennis','Ruben'];
+var extraMaleFirstNames = ['Per','Sten','Ove','Hans','Ola'];
+var lastNames = ['Abrahamsson','Ali','Andersson','Andreasson','Arvidsson','Axelsson','Bengtsson','Berg','Berggren','Berglund','Bergman','Bergqvist','Bergström','Björk','Björklund','Blom','Blomqvist','Börjesson','Claesson','Dahlberg','Danielsson','Ek','Eklund','Ekström','Eliasson','Engström','Eriksson','Falk','Forsberg','Fransson','Fredriksson','Gunnarsson','Gustafsson','Göransson','Hansen','Hansson','Hedlund','Hellström','Henriksson','Hermansson','Holm','Holmberg','Holmgren','Holmqvist','Håkansson','Isaksson','Ivarsson','Jakobsson','Jansson','Johansson','Jonasson','Jonsson','Josefsson','Jönsson','Karlsson','Larsson','Lind','Lindberg','Lindgren','Lindholm','Lindqvist','Lindström','Lund','Lundberg','Lundgren','Lundin','Lundqvist','Lundström','Löfgren','Magnusson','Martinsson','Mattsson','Mohamed','Muhamed','Månsson','Mårtensson','Nilsson','Norberg','Nordin','Nordström','Nyberg','Nyström','Olofsson','Olsson','Persson','Pettersson','Pålsson','Samuelsson','Sandberg','Sandström','Sjöberg','Sjögren','Ström','Strömberg','Sundberg','Sundqvist','Sundström','Svensson','Söderberg','Söderström','Wallin','Viklund','Wikström','Åberg','Åkesson','Åström','Öberg'];
+var interests = ['3D printing','Amateur radio','Acting','Baton twirling','Board games','Book restoration','Beer brewing','Cabaret','Calligraphy','Candle making','Computer programming','Coffee','Cooking','Coloring','Cosplaying','Creative writing','Crocheting','Crossword puzzles','Cryptography','Dance','Digital arts','Drama','Drawing','Do it yourself','Electronics','Embroidery','Fashion','Flower arranging','Foreign language learning','Gaming','Role-playing games','Genealogy','Ice skating','Jewelry making','Jigsaw puzzles','Staring out the window','Juggling','Knitting','Leather crafting','Lego building','Lockpicking','Magic','Model building','Listening to music','Origami','Painting','Piano','Guitarr','Pet','Poi','Pottery','Puzzles','Quilting','Reading','Scrapbooking','Sculpting','Sewing','Singing','Singing in the shower','Sudoku','Sketching','Soapmaking','Stand-up comedy','Table tennis','Video gaming','Watching movies','Web surfing','Whittling','Wood carving','Woodworking','Writing','Yoga','Yo-yoing'];
+var itemPrefix = ['Awesome','Great','Good','Rusty','Shiny','Adamantium','Iron','Fairy','Dwarven','Elven','Old','Evil','Daemonic','Putrid', 'Rotten', 'Festering','Ballsy', 'Explodifying', 'Polished', 'Broken', 'Red', 'Black','Yellow', 'Green','Possessed'];
+var itemType = ['Longsword','Sword','Dagger','Flail','Staff','Spear','Axe','Longbow','Bow','Cross-bow','Shield','Buckler','Helmet','Chainmail','Brest plate','Gloves','Shoes','Sabre','Wand','Shoulder plate','Cape'];
+var itemSuffix = ['Poison','Fire','Ice','Giant-slaying','Dragon-slaying','the Slug','Hydra','Adamantium','the Unicorn','the Rainbow','Torture','Evilness','the Possessed','Venom','Magma','Sharknado','Gore-nado','Lightning','Ticklebottom','Disco-power','Crushazorian','the Princess Beyond the Stars','the Bloodomancer','the Necromancer','Cthulhu','Yog-sothoth','Shub-niggurath','Hastur'];
+var races = ['Human','Ork','Elf','Dwarf','Gnome','Dark elf','Troll','Panda','Wolfen','Ogre','Donkey','Goblin','Hobgoblin','Troglodyte','Imp','Kobold','Vampire','Werewolf','Werebear'];
+var places = ['Forest','Dark forest','Swamp','Evil swamp','Hills','Plains','Mountains','Beach','River','Cave','Underground','Underworld','Beyond the Stars','Tundra','Ocean','Lake','','','','','','','','','',''];
+
+function getRandomValueFromArray(arr){
+	return arr[Math.floor(Math.random()*arr.length)];
+}
+// Returns a random integer between min (included) and max (included)
+function getRandomValue(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function getRandomDate() {
+	return new Date(getRandomValue(2003,2016), getRandomValue(1,12), getRandomValue(1,30));
+}
+function getRandomArrayFromFunc(min,max,foo) {
+	var max = getRandomValue(min,max);
+	var arr = [];
+	for(var i=0; i<max; i++)
+		arr.push(foo());
+	return arr;
+}
+function getRandomArrayFromArray(min,max,other_array) {
+	var max = getRandomValue(min,max);
+	var arr = [];
+	for(var i=0; i<max; i++)
+		arr.push(getRandomValueFromArray(other_array));
+	return arr;
+}
+
+function getRandomStreet() {
+	return getRandomValue(1,123) + " " + getRandomValueFromArray(street_name) + " " + getRandomValueFromArray(street_end);
+}
+
+function getFirstName(x) {
+	if(x===0){
+		if(getRandomValue(1,100) >= 95)
+			return getRandomValueFromArray(extraFemaleFirstNames) + "-" + getRandomValueFromArray(femaleFirstNames);
+		else
+			return getRandomValueFromArray(femaleFirstNames);
+	} else {
+		if(getRandomValue(1,100) >= 95)
+			return getRandomValueFromArray(extraMaleFirstNames) + "-" + getRandomValueFromArray(maleFirstNames);
+		else
+			return getRandomValueFromArray(maleFirstNames);
+	}
+}
+
+function getGender(x) {
+	if(x===0)
+		return 'female';
+	else
+		return 'male';
+}
+
+function getItemName() {
+	return getRandomValueFromArray(itemPrefix) + " " + getRandomValueFromArray(itemType) + " of " + getRandomValueFromArray(itemSuffix);
+}
+
+function getPlaceName() {
+	return getRandomValueFromArray(placePrefix) + " " + getRandomValueFromArray(placeType) + " of " + getRandomValueFromArray(placeSuffix);
+}
+
+function getRandomWord() {
+	switch(getRandomValue(1,7)) {
+		case 1:
+			return getRandomStreet();
+			break;
+		case 2:
+			return getFirstName(getRandomValue(0,1));
+			break;
+		case 3:
+			return getItemName();
+			break
+		case 4:
+			return getPlaceName();
+			break;
+		case 5:
+			return getRandomValueFromArray(lastNames);
+			break;
+		case 6:
+			return getRandomValueFromArray(races);
+			break;
+		case 7:
+			return getRandomValueFromArray(interests);
+			break;
+		default:
+			return "Necronomicon";
+	}
+}
+function getRandomArray() {
+getRandomArrayFromFunc(1,7,getPlaceName)
+getRandomArrayFromArray(1,7,interests)
+
+
+
+getRandomArrayFromArray(1,getRandomValue(2,100),lastNames)
+getRandomArrayFromArray(1,getRandomValue(2,100),races)
+getRandomArrayFromArray(1,getRandomValue(2,100),interests)
+getRandomArrayFromFunc(1,getRandomValue(2,100),func)
+}
+
+function createRandomItems(total) {
+	db.items.drop();
+	for(var i=0; i < total; i++) {
+		db.items.insert(
+			{
+				'item_id' : 'item' + i,
+				'datePosted' : getRandomDate(),
+				'name' : getItemName(),
+				'cost' : getRandomValue(10,10000),
+				'found_in' : getRandomArrayFromFunc(1,7,getPlaceName),
+				'owner' : {
+					'first_name' : getFirstName(i%2),
+					'last_name' : getRandomValueFromArray(lastNames),
+					'gender' : getGender(i%2),
+					'age': getRandomValue(7,93),
+					'street' : getRandomStreet(),
+					'interests' : getRandomArrayFromArray(1,7,interests),
+					'race' : getRandomValueFromArray(races)
+				},
+				'random_word' : getRandomWord(),
+				'random_array' : getRandomArray()
+			}
+		);
+	}
+}
