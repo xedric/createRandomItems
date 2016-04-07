@@ -10,7 +10,10 @@ var itemPrefix = ['Awesome','Great','Good','Rusty','Shiny','Adamantium','Iron','
 var itemType = ['Longsword','Sword','Dagger','Flail','Staff','Spear','Axe','Longbow','Bow','Cross-bow','Shield','Buckler','Helmet','Chainmail','Brest plate','Gloves','Shoes','Sabre','Wand','Shoulder plate','Cape'];
 var itemSuffix = ['Poison','Fire','Ice','Giant-slaying','Dragon-slaying','the Slug','Hydra','Adamantium','the Unicorn','the Rainbow','Torture','Evilness','the Possessed','Venom','Magma','Sharknado','Gore-nado','Lightning','Ticklebottom','Disco-power','Crushazorian','the Princess Beyond the Stars','the Bloodomancer','the Necromancer','Cthulhu','Yog-sothoth','Shub-niggurath','Hastur'];
 var races = ['Human','Ork','Elf','Dwarf','Gnome','Dark elf','Troll','Panda','Wolfen','Ogre','Donkey','Goblin','Hobgoblin','Troglodyte','Imp','Kobold','Vampire','Werewolf','Werebear'];
-var places = ['Forest','Dark forest','Swamp','Evil swamp','Hills','Plains','Mountains','Beach','River','Cave','Underground','Underworld','Beyond the Stars','Tundra','Ocean','Lake','','','','','','','','','',''];
+
+var placePrefix = ['Dark','Happy','Candy','Rainbow','Black','Magma'];
+var placeType = ['Forests','Swamps','Hills','Plains','Mountains','Beaches','River','Caves','Tunnels','City','Tundras','Lake','Tower','Castle','Palace','Fortress','Church','Temple'];
+var placeSuffix = ['Death','Horror','Pain','Gugge','Ice','Cthulhu','Yog-sothoth','Shub-niggurath','Hastur'];
 
 function getRandomValueFromArray(arr){
 	return arr[Math.floor(Math.random()*arr.length)];
