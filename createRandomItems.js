@@ -70,8 +70,18 @@ function getPlaceName() {
 	return getRandomValueFromArray(placePrefix) + " " + getRandomValueFromArray(placeType) + " of " + getRandomValueFromArray(placeSuffix);
 }
 
+function getRandomString() {
+	var small_alfa = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+	var str = "";
+	var x = getRandomValue(5,13);
+	for(var i=0; i < x; i++) {
+		str += getRandomValueFromArray(small_alfa);
+	}
+	return str;
+}
+
 function getRandomWord() {
-	switch(getRandomValue(1,7)) {
+	switch(getRandomValue(1,8)) {
 		case 1:
 			return getRandomStreet();
 			break;
@@ -93,20 +103,48 @@ function getRandomWord() {
 		case 7:
 			return getRandomValueFromArray(interests);
 			break;
+		case 8:
+			return getRandomString();
+			break;
 		default:
 			return "Necronomicon";
 	}
 }
 function getRandomArray() {
-getRandomArrayFromFunc(1,7,getPlaceName)
-getRandomArrayFromArray(1,7,interests)
-
-
-
-getRandomArrayFromArray(1,getRandomValue(2,100),lastNames)
-getRandomArrayFromArray(1,getRandomValue(2,100),races)
-getRandomArrayFromArray(1,getRandomValue(2,100),interests)
-getRandomArrayFromFunc(1,getRandomValue(2,100),func)
+	switch(getRandomValue(1,10)) {
+		case 1:
+			return getRandomArrayFromFunc(1,getRandomValue(2,100),getPlaceName);
+			break;
+		case 2:
+			return getRandomArrayFromFunc(1,getRandomValue(2,100),getRandomDate);
+			break;
+		case 3:
+			return getRandomArrayFromFunc(1,getRandomValue(2,100),getItemName);
+			break
+		case 4:
+			return getRandomArrayFromFunc(1,getRandomValue(2,100),getRandomStreet);
+			break;
+		case 5:
+			return getRandomArrayFromFunc(1,getRandomValue(2,100),getRandomString);
+			break;
+		case 6:
+			return getRandomArrayFromArray(1,getRandomValue(2,100),lastNames);
+			break;
+		case 7:
+			return getRandomArrayFromArray(1,getRandomValue(2,100),races);
+			break;
+		case 8:
+			return getRandomArrayFromArray(1,getRandomValue(2,100),interests);
+			break;
+		case 9:
+			return getRandomArrayFromArray(1,getRandomValue(2,100),maleFirstNames);
+			break;
+		case 10:
+			return getRandomArrayFromArray(1,getRandomValue(2,100),femaleFirstNames);
+			break;
+		default:
+			return ["Necronomicon"];
+	}
 }
 
 function createRandomItems(total) {
