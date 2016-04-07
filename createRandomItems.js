@@ -114,35 +114,32 @@ function getRandomWord() {
 	}
 }
 function getRandomArray() {
-	switch(getRandomValue(1,10)) {
+	switch(getRandomValue(1,9)) {
 		case 1:
 			return getRandomArrayFromFunc(1,getRandomValue(2,100),getPlaceName);
 			break;
 		case 2:
-			return getRandomArrayFromFunc(1,getRandomValue(2,100),getRandomDate);
-			break;
-		case 3:
 			return getRandomArrayFromFunc(1,getRandomValue(2,100),getItemName);
 			break
-		case 4:
+		case 3:
 			return getRandomArrayFromFunc(1,getRandomValue(2,100),getRandomStreet);
 			break;
-		case 5:
+		case 4:
 			return getRandomArrayFromFunc(1,getRandomValue(2,100),getRandomString);
 			break;
-		case 6:
+		case 5:
 			return getRandomArrayFromArray(1,getRandomValue(2,100),lastNames);
 			break;
-		case 7:
+		case 6:
 			return getRandomArrayFromArray(1,getRandomValue(2,100),races);
 			break;
-		case 8:
+		case 7:
 			return getRandomArrayFromArray(1,getRandomValue(2,100),interests);
 			break;
-		case 9:
+		case 8:
 			return getRandomArrayFromArray(1,getRandomValue(2,100),maleFirstNames);
 			break;
-		case 10:
+		case 9:
 			return getRandomArrayFromArray(1,getRandomValue(2,100),femaleFirstNames);
 			break;
 		default:
