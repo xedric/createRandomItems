@@ -88,7 +88,7 @@ function getRandomString() {
 }
 
 function getRandomWord() {
-	switch(getRandomValue(1,8)) {
+	switch(getRandomValue(1,9)) {
 		case 1:
 			return getRandomStreet();
 			break;
@@ -112,6 +112,9 @@ function getRandomWord() {
 			break;
 		case 8:
 			return getRandomString();
+			break;
+		case 9:
+			return getRandomValueFromArray(profession);
 			break;
 		default:
 			return "Necronomicon";
@@ -145,6 +148,9 @@ function getRandomArray() {
 			break;
 		case 9:
 			return getRandomArrayFromArray(1,getRandomValue(2,100),femaleFirstNames);
+			break;
+		case 10:
+			return getRandomArrayFromArray(1,getRandomValue(2,100),profession);
 			break;
 		default:
 			return ["Necronomicon"];
