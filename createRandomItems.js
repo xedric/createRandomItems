@@ -121,7 +121,7 @@ function getRandomWord() {
 	}
 }
 function getRandomArray() {
-	switch(getRandomValue(1,9)) {
+	switch(getRandomValue(1,10)) {
 		case 1:
 			return getRandomArrayFromFunc(1,getRandomValue(2,100),getPlaceName);
 			break;
